@@ -1,0 +1,87 @@
+{
+  "last_node_id": 4,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "KlingStandard",
+      "pos": [200, 200],
+      "size": [320, 180],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [1],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KlingStandard"
+      },
+      "widgets_values": [
+        "A golden retriever running through a field of sunflowers at sunset, cinematic lighting, slow motion",
+        "5",
+        "16:9"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ShowText",
+      "pos": [600, 200],
+      "size": [450, 250],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText"
+      },
+      "widgets_values": [
+        "",
+        "Video URL will appear here after generation.\nCopy the URL and paste in browser to download."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "Note",
+      "pos": [200, 420],
+      "size": [850, 280],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "🎬 KLING TEXT-TO-VIDEO WORKFLOW (SIMPLE)\n\n📝 HOW TO USE:\n1. Edit the PROMPT in the Kling node - describe your desired video\n2. Set DURATION: 5 or 10 seconds\n3. Set ASPECT RATIO: 16:9 (landscape), 9:16 (portrait), or 1:1 (square)\n4. Click 'Queue Prompt' to generate\n5. Wait ~5 minutes for generation\n6. Copy video URL from ShowText node\n7. Paste URL in browser to download video\n\n💰 COST: ~$0.05-0.10 per 5 second video (Standard tier)\n\n💡 PROMPT TIPS:\n- Describe action, camera movement, style\n- Add lighting/atmosphere details\n- Keep prompts clear and specific\n- Examples: 'slow zoom in', 'camera pans left', 'cinematic lighting'\n\n⚠️ IMPORTANT: Make sure FAL_KEY environment variable is set!"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [1, 1, 0, 2, 0, "STRING"]
+  ],
+  "groups": [
+    {
+      "title": "Text-to-Video Generation",
+      "bounding": [170, 120, 920, 600],
+      "color": "#3f789e",
+      "font_size": 28,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
